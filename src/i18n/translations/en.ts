@@ -394,7 +394,7 @@ export const en: Translations = {
     faq: {
       title: "Your questions answered",
       subtitle:
-        "Clear answers on national crop monitoring, field diagnostics, credit scoring and deployment, for teams in Africa, Canada and the United States.",
+        "Clear answers on national crop monitoring, field diagnostics, credit scoring and deployment, for teams in Africa, Canada and the United States. For any other question, get in touch — we'd be glad to exchange with you, answer your questions and discuss your project.",
       footerBefore: "Still evaluating AgroPure for your organization?",
       footerLink: "Request a personalized demo",
       footerAfter: ", our team responds within one business day.",
