@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ArrowRight, Code2, Palette, Globe } from "lucide-react";
 import { Reveal } from "@/components/site/reveal";
-import { useTheme } from "@/components/site/theme-provider";
+import { ThemeAwareLogo } from "@/components/site/theme-aware-logo";
 import { useLocale } from "@/i18n/context";
 import { PARTNER_LOGOS } from "@/lib/partner-logos";
 import { siteButtonClass } from "@/lib/site-button";
@@ -83,8 +83,6 @@ export function DeliverySection() {
 
 export function TrustSection() {
   const { t } = useLocale();
-  const { resolved } = useTheme();
-  const isDark = resolved === "dark";
 
   return (
     <section className="py-16 bg-background">
@@ -103,12 +101,12 @@ export function TrustSection() {
               aria-label={`${logo.name}, site officiel`}
               className="flex h-full w-full items-center justify-center opacity-70 transition-opacity duration-300 hover:opacity-100"
             >
-              <img
-                src={isDark ? logo.white : logo.color}
+              <ThemeAwareLogo
+                color={logo.color}
+                white={logo.white}
                 alt={logo.name}
                 width={160}
                 height={56}
-                loading="lazy"
                 className="max-h-full max-w-full object-contain object-center"
               />
             </a>

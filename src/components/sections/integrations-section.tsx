@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/site/reveal";
-import { useTheme } from "@/components/site/theme-provider";
+import { ThemeAwareLogo } from "@/components/site/theme-aware-logo";
 import { useLocale } from "@/i18n/context";
 import { INTEGRATION_LOGOS } from "@/lib/integration-logos";
 
@@ -8,8 +8,6 @@ const MARQUEE_ITEMS = [...MARQUEE_SET, ...MARQUEE_SET];
 
 export function IntegrationsSection() {
   const { t } = useLocale();
-  const { resolved } = useTheme();
-  const isDark = resolved === "dark";
 
   return (
     <section id="integrations" className="bg-background py-16 md:py-20 overflow-hidden scroll-mt-28">
@@ -35,12 +33,12 @@ export function IntegrationsSection() {
               aria-label={`${logo.name}, site officiel`}
               className="shrink-0 opacity-60 hover:opacity-100 transition-opacity duration-300"
             >
-              <img
-                src={isDark ? logo.white : logo.color}
+              <ThemeAwareLogo
+                color={logo.color}
+                white={logo.white}
                 alt={logo.name}
                 width={160}
                 height={40}
-                loading="lazy"
                 className="h-8 md:h-10 w-auto max-w-[140px] object-contain"
               />
             </a>
