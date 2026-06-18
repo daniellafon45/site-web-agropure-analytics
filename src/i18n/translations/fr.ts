@@ -279,7 +279,7 @@ export const fr: Translations = {
           ],
         },
         {
-          title: "Solutions white-label",
+          title: "Solution en marque blanche",
           description: "Déployez sous votre marque, à l'échelle nationale.",
           bullets: [
             "Personnalisation complète de l'interface",
@@ -289,7 +289,7 @@ export const fr: Translations = {
           ],
         },
         {
-          title: "Application web & application mobile",
+          title: "Applications web & applications mobiles",
           description: "Accès immédiat, sans installation.",
           bullets: [
             "Interface intuitive multi-appareils",
