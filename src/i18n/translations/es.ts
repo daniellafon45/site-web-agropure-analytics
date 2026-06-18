@@ -366,7 +366,7 @@ export const es: Translations = {
     faq: {
       title: "Sus preguntas, respondidas",
       subtitle:
-        "Respuestas claras sobre monitoreo nacional de cultivos, diagnóstico en campo, scoring crediticio y despliegue, para equipos en África, Canadá y Estados Unidos. Para cualquier otra pregunta, contáctenos: estaremos encantados de intercambiar con usted, responder a sus dudas y hablar de su proyecto.",
+        "Para cualquier otra pregunta, contáctenos: estaremos encantados de intercambiar con usted, responder a sus dudas y hablar de su proyecto.",
       footerBefore: "¿Sigue evaluando AgroPure para su organización?",
       footerLink: "Solicitar una demo personalizada",
       footerAfter: ", nuestro equipo responde en un día hábil.",

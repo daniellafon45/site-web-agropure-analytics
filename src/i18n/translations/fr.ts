@@ -414,7 +414,7 @@ export const fr: Translations = {
     faq: {
       title: "Vos questions, nos réponses",
       subtitle:
-        "Réponses claires sur le suivi national des cultures, le diagnostic terrain, le scoring crédit et le déploiement, pour l'Afrique, le Canada et les États-Unis. Pour toute autre question, contactez-nous : nous serons ravis d'échanger avec vous, de répondre à vos interrogations et de discuter de votre projet.",
+        "Pour toute autre question, contactez-nous : nous serons ravis d'échanger avec vous, de répondre à vos interrogations et de discuter de votre projet.",
       footerBefore: "Vous évaluez encore AgroPure pour votre organisation ?",
       footerLink: "Demander une démo personnalisée",
       footerAfter: ", notre équipe répond sous un jour ouvrable.",
