@@ -53,11 +53,17 @@ export function SiteNav() {
   const closeMenu = () => setOpen(false);
   const lightHeader = isHome && atTop && isDesktopNav;
 
+  const solidHeader = !lightHeader;
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[60] transition-colors duration-300 pt-[env(safe-area-inset-top,0px)] ${
-        lightHeader ? "bg-transparent" : "bg-background/95 backdrop-blur-sm border-b border-border shadow-sm"
-      }`}
+      className={cn(
+        "fixed top-0 left-0 right-0 z-[80] transition-[background-color,opacity,box-shadow] duration-300 pt-[env(safe-area-inset-top,0px)]",
+        lightHeader && "bg-transparent",
+        solidHeader &&
+          "border-b border-border bg-background shadow-sm lg:bg-background/95 lg:backdrop-blur-sm",
+        open && "max-lg:pointer-events-none max-lg:opacity-0",
+      )}
     >
       <div className="mx-auto flex min-w-0 max-w-[1200px] items-center justify-between gap-2 px-4 py-3 sm:gap-4 sm:px-6 sm:py-4 lg:px-8 lg:py-6">
         <Logo

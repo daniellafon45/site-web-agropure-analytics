@@ -34,7 +34,7 @@ export function LanguageSwitcher({ light = false }: { light?: boolean }) {
         align="end"
         sideOffset={12}
         collisionPadding={{ top: 72, bottom: 16 }}
-        className="z-[70] min-w-[10rem] rounded-lg border-border bg-card text-card-foreground shadow-lg"
+        className="z-[90] min-w-[10rem] rounded-lg border-border bg-card text-card-foreground shadow-lg"
       >
         <DropdownMenuRadioGroup
           value={locale}
