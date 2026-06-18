@@ -22,6 +22,12 @@ export function ContactSection() {
   const [phoneCountry, setPhoneCountry] = useState(() => getDefaultCountryIso(locale));
   const [phoneNumber, setPhoneNumber] = useState("");
 
+  function markSubmitSuccess() {
+    setPhoneNumber("");
+    setPhoneCountry(getDefaultCountryIso(locale));
+    setStatus("success");
+  }
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
@@ -44,7 +50,7 @@ export function ContactSection() {
 
     try {
       await submitContactForm({ data: payload });
-      setStatus("success");
+      markSubmitSuccess();
     } catch (err) {
       const message = err instanceof Error ? err.message : "Error";
 
@@ -59,7 +65,7 @@ export function ContactSection() {
             website: payload.website,
             message: payload.message,
           });
-          setStatus("success");
+          markSubmitSuccess();
           return;
         } catch (fallbackErr) {
           setStatus("error");
