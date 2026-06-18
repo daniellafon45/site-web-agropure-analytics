@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://agropure-analytics.com/fr</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/zh</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/es</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/fr/confidentialite</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/confidentialite"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/en/confidentialite</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/confidentialite"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/zh/confidentialite</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/confidentialite"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/es/confidentialite</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/confidentialite"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/fr/blog</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/zh/blog</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/es/blog</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/fr/blog/national-crop-monitoring-platform</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/national-crop-monitoring-platform"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/national-crop-monitoring-platform"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/national-crop-monitoring-platform"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/national-crop-monitoring-platform"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/national-crop-monitoring-platform"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/fr/blog/real-time-pest-diagnostics-field</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/real-time-pest-diagnostics-field"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/real-time-pest-diagnostics-field"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/real-time-pest-diagnostics-field"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/real-time-pest-diagnostics-field"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/real-time-pest-diagnostics-field"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/fr/blog/agricultural-credit-scoring-insurers</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/agricultural-credit-scoring-insurers"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/agricultural-credit-scoring-insurers"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/agricultural-credit-scoring-insurers"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/agricultural-credit-scoring-insurers"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/agricultural-credit-scoring-insurers"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/fr/blog/cooperative-traceability-supply-chain</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/cooperative-traceability-supply-chain"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/cooperative-traceability-supply-chain"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/cooperative-traceability-supply-chain"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/cooperative-traceability-supply-chain"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/cooperative-traceability-supply-chain"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/fr/blog/digital-farm-survey-mobile-data</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/digital-farm-survey-mobile-data"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/digital-farm-survey-mobile-data"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/digital-farm-survey-mobile-data"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/digital-farm-survey-mobile-data"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/digital-farm-survey-mobile-data"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/fr/blog/field-boundary-detection-ai-parcels</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/field-boundary-detection-ai-parcels"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/field-boundary-detection-ai-parcels"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/field-boundary-detection-ai-parcels"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/field-boundary-detection-ai-parcels"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/field-boundary-detection-ai-parcels"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/fr/blog/smallholder-credit-data-africa</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/smallholder-credit-data-africa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/smallholder-credit-data-africa"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/smallholder-credit-data-africa"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/smallholder-credit-data-africa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/smallholder-credit-data-africa"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/fr/blog/satellite-drought-monitoring-crops</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/satellite-drought-monitoring-crops"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/satellite-drought-monitoring-crops"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/satellite-drought-monitoring-crops"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/satellite-drought-monitoring-crops"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/satellite-drought-monitoring-crops"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/fr/blog/agtech-api-white-label-integration</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/agtech-api-white-label-integration"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/agtech-api-white-label-integration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/agtech-api-white-label-integration"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/agtech-api-white-label-integration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/agtech-api-white-label-integration"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/fr/blog/parametric-insurance-crop-data</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/parametric-insurance-crop-data"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/parametric-insurance-crop-data"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/parametric-insurance-crop-data"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/parametric-insurance-crop-data"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/parametric-insurance-crop-data"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/en/blog/national-crop-monitoring-platform</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/national-crop-monitoring-platform"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/national-crop-monitoring-platform"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/national-crop-monitoring-platform"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/national-crop-monitoring-platform"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/national-crop-monitoring-platform"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/en/blog/real-time-pest-diagnostics-field</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/real-time-pest-diagnostics-field"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/real-time-pest-diagnostics-field"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/real-time-pest-diagnostics-field"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/real-time-pest-diagnostics-field"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/real-time-pest-diagnostics-field"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/en/blog/agricultural-credit-scoring-insurers</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/agricultural-credit-scoring-insurers"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/agricultural-credit-scoring-insurers"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/agricultural-credit-scoring-insurers"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/agricultural-credit-scoring-insurers"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/agricultural-credit-scoring-insurers"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/en/blog/cooperative-traceability-supply-chain</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/cooperative-traceability-supply-chain"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/cooperative-traceability-supply-chain"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/cooperative-traceability-supply-chain"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/cooperative-traceability-supply-chain"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/cooperative-traceability-supply-chain"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/en/blog/digital-farm-survey-mobile-data</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/digital-farm-survey-mobile-data"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/digital-farm-survey-mobile-data"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/digital-farm-survey-mobile-data"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/digital-farm-survey-mobile-data"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/digital-farm-survey-mobile-data"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/en/blog/field-boundary-detection-ai-parcels</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/field-boundary-detection-ai-parcels"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/field-boundary-detection-ai-parcels"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/field-boundary-detection-ai-parcels"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/field-boundary-detection-ai-parcels"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/field-boundary-detection-ai-parcels"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/en/blog/smallholder-credit-data-africa</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/smallholder-credit-data-africa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/smallholder-credit-data-africa"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/smallholder-credit-data-africa"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/smallholder-credit-data-africa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/smallholder-credit-data-africa"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/en/blog/satellite-drought-monitoring-crops</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/satellite-drought-monitoring-crops"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/satellite-drought-monitoring-crops"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/satellite-drought-monitoring-crops"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/satellite-drought-monitoring-crops"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/satellite-drought-monitoring-crops"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/en/blog/agtech-api-white-label-integration</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/agtech-api-white-label-integration"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/agtech-api-white-label-integration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/agtech-api-white-label-integration"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/agtech-api-white-label-integration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/agtech-api-white-label-integration"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/en/blog/parametric-insurance-crop-data</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/parametric-insurance-crop-data"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/parametric-insurance-crop-data"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/parametric-insurance-crop-data"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/parametric-insurance-crop-data"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/parametric-insurance-crop-data"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/zh/blog/national-crop-monitoring-platform</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/national-crop-monitoring-platform"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/national-crop-monitoring-platform"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/national-crop-monitoring-platform"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/national-crop-monitoring-platform"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/national-crop-monitoring-platform"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/zh/blog/real-time-pest-diagnostics-field</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/real-time-pest-diagnostics-field"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/real-time-pest-diagnostics-field"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/real-time-pest-diagnostics-field"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/real-time-pest-diagnostics-field"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/real-time-pest-diagnostics-field"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/zh/blog/agricultural-credit-scoring-insurers</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/agricultural-credit-scoring-insurers"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/agricultural-credit-scoring-insurers"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/agricultural-credit-scoring-insurers"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/agricultural-credit-scoring-insurers"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/agricultural-credit-scoring-insurers"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/zh/blog/cooperative-traceability-supply-chain</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/cooperative-traceability-supply-chain"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/cooperative-traceability-supply-chain"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/cooperative-traceability-supply-chain"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/cooperative-traceability-supply-chain"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/cooperative-traceability-supply-chain"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/zh/blog/digital-farm-survey-mobile-data</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/digital-farm-survey-mobile-data"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/digital-farm-survey-mobile-data"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/digital-farm-survey-mobile-data"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/digital-farm-survey-mobile-data"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/digital-farm-survey-mobile-data"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/zh/blog/field-boundary-detection-ai-parcels</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/field-boundary-detection-ai-parcels"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/field-boundary-detection-ai-parcels"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/field-boundary-detection-ai-parcels"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/field-boundary-detection-ai-parcels"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/field-boundary-detection-ai-parcels"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/zh/blog/smallholder-credit-data-africa</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/smallholder-credit-data-africa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/smallholder-credit-data-africa"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/smallholder-credit-data-africa"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/smallholder-credit-data-africa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/smallholder-credit-data-africa"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/zh/blog/satellite-drought-monitoring-crops</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/satellite-drought-monitoring-crops"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/satellite-drought-monitoring-crops"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/satellite-drought-monitoring-crops"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/satellite-drought-monitoring-crops"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/satellite-drought-monitoring-crops"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/zh/blog/agtech-api-white-label-integration</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/agtech-api-white-label-integration"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/agtech-api-white-label-integration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/agtech-api-white-label-integration"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/agtech-api-white-label-integration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/agtech-api-white-label-integration"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/zh/blog/parametric-insurance-crop-data</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/parametric-insurance-crop-data"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/parametric-insurance-crop-data"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/parametric-insurance-crop-data"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/parametric-insurance-crop-data"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/parametric-insurance-crop-data"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/es/blog/national-crop-monitoring-platform</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/national-crop-monitoring-platform"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/national-crop-monitoring-platform"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/national-crop-monitoring-platform"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/national-crop-monitoring-platform"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/national-crop-monitoring-platform"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/es/blog/real-time-pest-diagnostics-field</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/real-time-pest-diagnostics-field"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/real-time-pest-diagnostics-field"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/real-time-pest-diagnostics-field"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/real-time-pest-diagnostics-field"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/real-time-pest-diagnostics-field"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/es/blog/agricultural-credit-scoring-insurers</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/agricultural-credit-scoring-insurers"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/agricultural-credit-scoring-insurers"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/agricultural-credit-scoring-insurers"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/agricultural-credit-scoring-insurers"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/agricultural-credit-scoring-insurers"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/es/blog/cooperative-traceability-supply-chain</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/cooperative-traceability-supply-chain"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/cooperative-traceability-supply-chain"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/cooperative-traceability-supply-chain"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/cooperative-traceability-supply-chain"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/cooperative-traceability-supply-chain"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/es/blog/digital-farm-survey-mobile-data</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/digital-farm-survey-mobile-data"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/digital-farm-survey-mobile-data"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/digital-farm-survey-mobile-data"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/digital-farm-survey-mobile-data"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/digital-farm-survey-mobile-data"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/es/blog/field-boundary-detection-ai-parcels</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/field-boundary-detection-ai-parcels"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/field-boundary-detection-ai-parcels"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/field-boundary-detection-ai-parcels"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/field-boundary-detection-ai-parcels"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/field-boundary-detection-ai-parcels"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/es/blog/smallholder-credit-data-africa</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/smallholder-credit-data-africa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/smallholder-credit-data-africa"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/smallholder-credit-data-africa"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/smallholder-credit-data-africa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/smallholder-credit-data-africa"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/es/blog/satellite-drought-monitoring-crops</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/satellite-drought-monitoring-crops"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/satellite-drought-monitoring-crops"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/satellite-drought-monitoring-crops"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/satellite-drought-monitoring-crops"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/satellite-drought-monitoring-crops"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/es/blog/agtech-api-white-label-integration</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/agtech-api-white-label-integration"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/agtech-api-white-label-integration"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/agtech-api-white-label-integration"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/agtech-api-white-label-integration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/agtech-api-white-label-integration"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agropure-analytics.com/es/blog/parametric-insurance-crop-data</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agropure-analytics.com/fr/blog/parametric-insurance-crop-data"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agropure-analytics.com/en/blog/parametric-insurance-crop-data"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://agropure-analytics.com/zh/blog/parametric-insurance-crop-data"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://agropure-analytics.com/es/blog/parametric-insurance-crop-data"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agropure-analytics.com/en/blog/parametric-insurance-crop-data"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

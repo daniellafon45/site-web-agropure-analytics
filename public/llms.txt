@@ -1,0 +1,37 @@
+# AgroPure Analytics
+
+> Suite logicielle qui transforme les données agricoles en actions concrètes en temps réel pour gouvernements, agriculteurs, coopératives et assureurs.
+
+## Site officiel
+
+- https://agropure-analytics.com/
+
+## Pages clés
+
+- Home (EN) : https://agropure-analytics.com/en
+- Accueil (FR) : https://agropure-analytics.com/fr
+- 首页 (ZH) : https://agropure-analytics.com/zh
+- Inicio (ES) : https://agropure-analytics.com/es
+- Privacy : https://agropure-analytics.com/en/confidentialite
+
+## Secteurs
+
+- Gouvernements, plateformes nationales EOSDA, enquêtes, surveillance hydrique
+- Agriculteurs, décision, dosage, diagnostic ravageurs (Afrique, Canada, USA)
+- Coopératives & ONG, logistique, transhumance, traçabilité
+- Assurances, scoring crédit agricole
+
+## Produits
+
+- Plateforme nationale EOSDA
+- Numérisation des enquêtes nationales
+- Diagnostic photo maladies et ravageurs
+- Calculateur simplifié et fiches techniques
+- Surveillance des réservoirs hydriques
+- Suivi des pratiques culturales
+- Outils marché, transhumance et tokenisation
+
+## Contact
+
+- Courriel : contact@agropure-analytics.com
+- LinkedIn : https://www.linkedin.com/company/agropure-analytics/
