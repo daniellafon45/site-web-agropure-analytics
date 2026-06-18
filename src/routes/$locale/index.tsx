@@ -11,7 +11,7 @@ import { ContactSection, FaqSection } from "@/components/sections/contact-sectio
 import { useLocale } from "@/i18n/context";
 import { getTranslations } from "@/i18n/translations";
 import { buildPageHead, faqJsonLd, localePath, organizationJsonLd } from "@/lib/seo/site-config";
-import { HERO_VIDEO_SRC } from "@/lib/hero-media";
+import { HERO_POSTER_WEBP, HERO_VIDEO_SRC } from "@/lib/hero-media";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "@/i18n/types";
 
 export const Route = createFileRoute("/$locale/")({
@@ -28,6 +28,7 @@ export const Route = createFileRoute("/$locale/")({
       ...page,
       links: [
         ...page.links,
+        { rel: "preload", href: HERO_POSTER_WEBP, as: "image", type: "image/webp", fetchPriority: "high" },
         { rel: "preload", href: HERO_VIDEO_SRC, as: "video", type: "video/mp4" },
       ],
     };

@@ -1,39 +1,46 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Reveal } from "@/components/site/reveal";
-import { SiteNav } from "@/components/site/nav";
 import { useLocale } from "@/i18n/context";
-import { HERO_VIDEO_SRC } from "@/lib/hero-media";
+import { HERO_POSTER_JPG, HERO_POSTER_WEBP, HERO_VIDEO_SRC } from "@/lib/hero-media";
 import { siteButtonClass } from "@/lib/site-button";
+import { cn } from "@/lib/utils";
 
 export function HeroSection() {
   const { t } = useLocale();
-  const [reducedMotion, setReducedMotion] = useState(false);
-
-  useEffect(() => {
-    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const update = () => setReducedMotion(media.matches);
-    update();
-    media.addEventListener("change", update);
-    return () => media.removeEventListener("change", update);
-  }, []);
+  const [videoPlaying, setVideoPlaying] = useState(false);
 
   return (
     <section className="bg-background p-3 sm:p-4 min-h-svh">
       <div className="relative isolate flex min-h-[calc(100svh-1.5rem)] flex-col overflow-hidden rounded-[20px] bg-black sm:rounded-[24px]">
-        <SiteNav embedded />
+        <picture
+          aria-hidden
+          className={cn(
+            "media-cover absolute inset-0 z-0 transition-opacity duration-700 ease-out",
+            videoPlaying && "pointer-events-none opacity-0",
+          )}
+        >
+          <source srcSet={HERO_POSTER_WEBP} type="image/webp" />
+          <img
+            src={HERO_POSTER_JPG}
+            alt=""
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+            className="media-cover size-full"
+          />
+        </picture>
 
-        {!reducedMotion ? (
-          <video
-            className="media-cover absolute inset-0"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-          >
-            <source src={HERO_VIDEO_SRC} type="video/mp4" />
-          </video>
-        ) : null}
+        <video
+          className="media-cover absolute inset-0 z-0 motion-reduce:hidden"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          onPlaying={() => setVideoPlaying(true)}
+        >
+          <source src={HERO_VIDEO_SRC} type="video/mp4" />
+        </video>
 
         <div className="absolute inset-0 bg-black/45" />
 
