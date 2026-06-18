@@ -200,6 +200,8 @@ export type Translations = {
       lastName: string;
       email: string;
       phone: string;
+      phonePlaceholder: string;
+      phoneCountryLabel: string;
       company: string;
       website: string;
       websitePlaceholder: string;

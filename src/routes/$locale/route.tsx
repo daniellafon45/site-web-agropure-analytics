@@ -2,6 +2,7 @@ import { Outlet, createFileRoute, notFound } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { LocaleProvider } from "@/i18n/context";
 import { ConsentBanner } from "@/components/site/consent-banner";
+import { SiteNav } from "@/components/site/nav";
 import { isLocale, LOCALE_HTML_LANG, type Locale } from "@/i18n/types";
 
 export const Route = createFileRoute("/$locale")({
@@ -23,6 +24,7 @@ function LocaleLayout() {
 
   return (
     <LocaleProvider locale={locale}>
+      <SiteNav />
       <Outlet />
       <ConsentBanner />
     </LocaleProvider>

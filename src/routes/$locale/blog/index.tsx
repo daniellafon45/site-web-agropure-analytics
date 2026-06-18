@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Clock } from "lucide-react";
-import { SiteNav } from "@/components/site/nav";
 import { SiteFooter } from "@/components/site/footer";
 import { useLocale } from "@/i18n/context";
 import { getTranslations } from "@/i18n/translations";
@@ -32,7 +31,6 @@ function BlogIndexPage() {
 
   return (
     <>
-      <SiteNav />
       <main className="pt-28 pb-20 px-4 sm:px-8">
         <div className="mx-auto max-w-[1200px]">
           <h1 className="text-3xl md:text-4xl font-display">{t.blog.title}</h1>
@@ -48,7 +46,7 @@ function BlogIndexPage() {
                   <div className="aspect-[16/10] overflow-hidden">
                     <img
                       src={post.coverImage}
-                      alt=""
+                      alt={post.title}
                       className="media-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
@@ -58,7 +56,9 @@ function BlogIndexPage() {
                   <span className="text-[10px] font-bold tracking-widest text-primary uppercase">
                     {post.category}
                   </span>
-                  <h2 className="mt-2 text-lg font-display leading-snug line-clamp-2">{post.title}</h2>
+                  <h2 className="mt-2 text-lg font-display leading-snug line-clamp-2">
+                    {post.title}
+                  </h2>
                   <p className="mt-2 text-sm text-secondary leading-relaxed line-clamp-3 flex-1">
                     {post.excerpt}
                   </p>

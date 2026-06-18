@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vite dev",
-    "prebuild": "node scripts/generate-sitemap.mjs",
+    "prebuild": "node scripts/generate-sitemap.mjs && node scripts/generate-public-assets.mjs",
     "optimize:hero": "node scripts/optimize-hero-video.mjs",
     "build": "vite build",
     "build:dev": "vite build --mode development",
@@ -97,6 +97,7 @@
     "lru-cache": "11.5.1",
     "nitro": "3.0.260603-beta",
     "prettier": "^3.7.3",
+    "sharp": "^0.35.1",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.56.1",
     "vite": "^7.3.1",

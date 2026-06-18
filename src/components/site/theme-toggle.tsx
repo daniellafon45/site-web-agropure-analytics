@@ -12,7 +12,7 @@ export function ThemeToggle({ light = false }: { light?: boolean }) {
       type="button"
       onClick={toggle}
       aria-label={isDark ? t.nav.themeLight : t.nav.themeDark}
-      className={`inline-flex size-11 items-center justify-center rounded-full transition-colors ${
+      className={`inline-flex size-10 shrink-0 items-center justify-center rounded-full transition-colors sm:size-11 ${
         light
           ? "text-white hover:bg-white/10"
           : "text-foreground hover:bg-foreground/5"

@@ -1,12 +1,14 @@
 import { Menu } from "lucide-react";
 import { Link, useRouter } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { useIsDesktopNav } from "@/hooks/use-media-query";
 import { useLocale } from "@/i18n/context";
 import type { Locale } from "@/i18n/types";
 import { Logo } from "./logo";
 import { LanguageSwitcher } from "./language-switcher";
 import { ThemeToggle } from "./theme-toggle";
 import { siteButtonClass } from "@/lib/site-button";
+import { cn } from "@/lib/utils";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 
 const SCROLL_THRESHOLD = 10;
@@ -17,9 +19,10 @@ type NavLink =
 
 const linkClassName = "block py-2.5 text-base font-medium hover:text-primary transition-colors";
 
-export function SiteNav({ embedded: _embedded = false }: { embedded?: boolean }) {
+export function SiteNav() {
   const { locale, t } = useLocale();
   const router = useRouter();
+  const isDesktopNav = useIsDesktopNav();
   const [open, setOpen] = useState(false);
   const [atTop, setAtTop] = useState(true);
 
@@ -48,19 +51,22 @@ export function SiteNav({ embedded: _embedded = false }: { embedded?: boolean })
   ];
 
   const closeMenu = () => setOpen(false);
-  const lightHeader = isHome && atTop;
+  const lightHeader = isHome && atTop && isDesktopNav;
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        lightHeader ? "bg-transparent" : "bg-background border-b border-border shadow-sm"
+      className={`fixed top-0 left-0 right-0 z-[60] transition-colors duration-300 pt-[env(safe-area-inset-top,0px)] ${
+        lightHeader ? "bg-transparent" : "bg-background/95 backdrop-blur-sm border-b border-border shadow-sm"
       }`}
     >
-      <div className="mx-auto max-w-[1200px] px-5 sm:px-8 py-6 flex items-center justify-between gap-4">
-        <Logo variant={lightHeader ? "light" : "default"} />
+      <div className="mx-auto flex min-w-0 max-w-[1200px] items-center justify-between gap-2 px-4 py-3 sm:gap-4 sm:px-6 sm:py-4 lg:px-8 lg:py-6">
+        <Logo
+          variant={lightHeader ? "light" : "default"}
+          className="h-8 w-auto max-w-[9.5rem] shrink-0 sm:max-w-none sm:h-10 lg:h-12"
+        />
 
         <div
-          className={`flex items-center gap-6 sm:gap-8 text-lg font-medium shrink-0 ${
+          className={`flex shrink-0 items-center gap-1.5 text-base font-medium sm:gap-3 sm:text-lg lg:gap-6 ${
             lightHeader ? "text-white" : "text-foreground"
           }`}
         >
@@ -73,19 +79,26 @@ export function SiteNav({ embedded: _embedded = false }: { embedded?: boolean })
             {t.nav.requestDemo}
           </a>
 
-          <LanguageSwitcher light={lightHeader} />
-          <ThemeToggle light={lightHeader} />
+          <div className={cn("flex items-center gap-1.5 sm:gap-3", open && "hidden")}>
+            <LanguageSwitcher light={lightHeader} />
+            <ThemeToggle light={lightHeader} />
+          </div>
 
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger
-              className={`inline-flex size-11 items-center justify-center transition-opacity hover:opacity-70 ${
-                lightHeader ? "rounded-md bg-black/30 text-white" : "text-foreground"
-              }`}
+              className={cn(
+                "inline-flex size-10 shrink-0 items-center justify-center rounded-md transition-colors sm:size-11",
+                lightHeader
+                  ? "bg-black/30 text-white hover:bg-black/40"
+                  : "text-foreground hover:bg-muted",
+                open && "hidden",
+              )}
               aria-label={t.nav.openMenu}
+              aria-expanded={open}
             >
               <Menu className="size-7" strokeWidth={1.75} />
             </SheetTrigger>
-            <SheetContent side="right" className="w-[min(100vw-2rem,22rem)] p-6">
+            <SheetContent side="right" className="w-[min(100vw-2rem,22rem)] p-6 pt-14">
               <SheetTitle className="text-left text-lg font-display">{t.nav.menu}</SheetTitle>
               <nav className="mt-8 flex flex-col gap-1">
                 {links.map((l) =>

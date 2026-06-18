@@ -17,7 +17,9 @@ const IMAGES: Record<string, string> = {
 };
 
 function isDesktopPointer() {
-  return typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches;
+  return (
+    typeof window !== "undefined" && window.matchMedia("(hover: hover) and (pointer: fine)").matches
+  );
 }
 
 export function IntroSection() {
@@ -62,7 +64,7 @@ export function IndustriesSection() {
         </Reveal>
 
         <div
-          className="flex flex-col gap-3 md:flex-row md:items-start md:gap-4"
+          className="flex flex-col gap-3 lg:flex-row lg:items-start lg:gap-4"
           onMouseLeave={() => setActiveId(null)}
         >
           {items.map((it, i) => {
@@ -77,9 +79,9 @@ export function IndustriesSection() {
                 aria-label={it.cardTitle}
                 className={cn(
                   "relative isolate overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ease-out scroll-mt-28",
-                  "min-h-[220px] aspect-[4/3] md:aspect-square md:min-h-0",
-                  "md:flex-1 md:min-w-0 md:basis-0",
-                  active ? "min-h-[360px] md:flex-[2.5]" : "",
+                  "min-h-[220px] aspect-[4/3] lg:aspect-square lg:min-h-0",
+                  "lg:flex-1 lg:min-w-0 lg:basis-0",
+                  active ? "min-h-[360px] lg:flex-[2.5]" : "",
                 )}
                 onMouseEnter={() => {
                   if (isDesktopPointer()) setActiveId(it.id);
@@ -114,23 +116,25 @@ export function IndustriesSection() {
                   aria-hidden={active}
                 >
                   <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/75 to-transparent" />
-                  <p className="relative z-10 pb-6 px-4 text-center text-base md:text-lg font-semibold text-white">
+                  <p className="relative z-10 px-4 pb-6 text-center text-lg font-semibold text-white md:text-xl">
                     {it.cardTitle}
                   </p>
                 </div>
 
                 <div
                   className={cn(
-                    "absolute inset-0 flex flex-col justify-between bg-[#2a2a2a] p-6 md:p-8 transition-opacity duration-500",
+                    "absolute inset-0 flex flex-col justify-between bg-[#2a2a2a] p-7 transition-opacity duration-500 md:p-10",
                     active ? "opacity-100" : "opacity-0 pointer-events-none",
                   )}
                   aria-hidden={!active}
                 >
-                  <p className="text-sm md:text-base text-white/80 leading-relaxed font-light">{it.desc}</p>
+                  <p className="max-w-prose text-base leading-relaxed text-white/90 sm:text-lg md:text-xl">
+                    {it.desc}
+                  </p>
                   <a
                     href="#contact"
                     onClick={(e) => e.stopPropagation()}
-                    className={cn(siteButtonClass({ variant: "brand", size: "sm" }), "mt-6 self-start")}
+                    className={cn(siteButtonClass({ variant: "brand" }), "mt-8 self-start")}
                   >
                     {t.home.industries.learnMore}
                     <ArrowRight className="size-4" aria-hidden />

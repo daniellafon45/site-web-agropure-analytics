@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { SiteNav } from "@/components/site/nav";
 import { SiteFooter } from "@/components/site/footer";
 import { useLocale } from "@/i18n/context";
 import { getTranslations } from "@/i18n/translations";
@@ -25,7 +24,6 @@ function PrivacyPage() {
 
   return (
     <>
-      <SiteNav />
       <main className="pt-28 pb-20 px-4 sm:px-8">
         <div className="mx-auto max-w-3xl">
           <h1 className="text-3xl md:text-4xl font-display">{t.privacy.title}</h1>

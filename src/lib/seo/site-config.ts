@@ -48,6 +48,19 @@ export function absoluteUrl(path: string): string {
 }
 
 export function organizationJsonLd(locale: Locale = DEFAULT_LOCALE) {
+  const descriptions: Record<Locale, string> = {
+    fr: "Suite logicielle qui transforme les données agricoles en actions concrètes en temps réel pour gouvernements, agriculteurs, coopératives et assureurs.",
+    en: "Software suite that turns agricultural data into real-time action for governments, farmers, cooperatives and insurers.",
+    es: "Suite de software que transforma los datos agrícolas en acciones concretas en tiempo real para gobiernos, agricultores, cooperativas y aseguradoras.",
+    zh: "将农业数据转化为政府、农民、合作社和保险公司实时行动的软件套件。",
+  };
+  const appDescriptions: Record<Locale, string> = {
+    fr: "Plateformes nationales, applications agriculteur, diagnostic ravageurs et scoring crédit agricole.",
+    en: "National platforms, farmer apps, pest diagnostics and agricultural credit scoring.",
+    es: "Plataformas nacionales, apps para agricultores, diagnóstico de plagas y scoring crediticio agrícola.",
+    zh: "国家级平台、农户应用、病虫害诊断与农业信贷评分。",
+  };
+
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -60,8 +73,7 @@ export function organizationJsonLd(locale: Locale = DEFAULT_LOCALE) {
         logo: absoluteUrl("/apple-touch-icon.png"),
         email: CONTACT_EMAIL,
         sameAs: [LINKEDIN_URL],
-        description:
-          "Suite logicielle qui transforme les données agricoles en actions concrètes en temps réel pour gouvernements, agriculteurs, coopératives et assureurs.",
+        description: descriptions[locale],
         areaServed: [
           { "@type": "Continent", name: "Africa" },
           { "@type": "Country", name: "Canada" },
@@ -81,9 +93,13 @@ export function organizationJsonLd(locale: Locale = DEFAULT_LOCALE) {
         name: SITE_NAME,
         applicationCategory: "BusinessApplication",
         operatingSystem: "Web",
-        offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Contact for pricing" },
-        description:
-          "Plateformes nationales, applications agriculteur, diagnostic ravageurs et scoring crédit agricole.",
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+          description: "Contact for pricing",
+        },
+        description: appDescriptions[locale],
       },
     ],
   };
@@ -140,6 +156,8 @@ type PageHeadInput = {
   path?: string;
   locale?: Locale;
   type?: "website" | "article";
+  image?: string;
+  robots?: string;
 };
 
 export function buildPageHead({
@@ -148,12 +166,15 @@ export function buildPageHead({
   path = localePath(DEFAULT_LOCALE),
   locale = DEFAULT_LOCALE,
   type = "website",
+  image,
+  robots = "index, follow, max-image-preview:large",
 }: PageHeadInput) {
   const canonical = absoluteUrl(path);
-  const image = absoluteUrl("/og-image.png");
+  const ogImage = image ?? absoluteUrl("/og-image.png");
+  const suffix = path.replace(`/${locale}`, "") || "";
+  const xDefaultPath = localePath(DEFAULT_LOCALE, suffix.replace(/^\//, ""));
 
   const alternates = LOCALES.flatMap((loc) => {
-    const suffix = path.replace(`/${locale}`, "") || "";
     const altPath = localePath(loc, suffix.replace(/^\//, ""));
     return [
       { rel: "alternate" as const, hrefLang: LOCALE_HREFLANG[loc], href: absoluteUrl(altPath) },
@@ -166,24 +187,28 @@ export function buildPageHead({
       { title },
       { name: "description", content: description },
       { name: "application-name", content: SITE_NAME },
-      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { name: "robots", content: robots },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: type },
       { property: "og:url", content: canonical },
       { property: "og:site_name", content: SITE_NAME },
       { property: "og:locale", content: LOCALE_OG[locale] },
-      { property: "og:image", content: image },
+      { property: "og:image", content: ogImage },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
-      { name: "twitter:image", content: image },
-      ...alternates.filter((item): item is { property: string; content: string } => "property" in item),
+      { name: "twitter:image", content: ogImage },
+      ...alternates.filter(
+        (item): item is { property: string; content: string } => "property" in item,
+      ),
     ],
     links: [
       { rel: "canonical", href: canonical },
-      { rel: "alternate", hrefLang: "x-default", href: absoluteUrl(localePath(DEFAULT_LOCALE)) },
-      ...alternates.filter((item): item is { rel: "alternate"; hrefLang: string; href: string } => "hrefLang" in item),
+      { rel: "alternate", hrefLang: "x-default", href: absoluteUrl(xDefaultPath) },
+      ...alternates.filter(
+        (item): item is { rel: "alternate"; hrefLang: string; href: string } => "hrefLang" in item,
+      ),
     ],
   };
 }

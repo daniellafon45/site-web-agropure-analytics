@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Clock } from "lucide-react";
-import { SiteNav } from "@/components/site/nav";
 import { SiteFooter } from "@/components/site/footer";
 import { BlogContent } from "@/components/blog/blog-content";
 import { BlogArticleLinks } from "@/components/blog/blog-article-links";
@@ -21,6 +20,7 @@ export const Route = createFileRoute("/$locale/blog/$slug")({
         description: t.blog.notFound,
         path: localePath(locale, `blog/${params.slug}`),
         locale,
+        robots: "noindex, follow",
       });
     }
     return buildPageHead({
@@ -29,6 +29,7 @@ export const Route = createFileRoute("/$locale/blog/$slug")({
       path: localePath(locale, `blog/${post.slug}`),
       locale,
       type: "article",
+      image: post.coverImage ? absoluteUrl(post.coverImage) : undefined,
     });
   },
   loader: ({ params }) => {
@@ -46,11 +47,14 @@ function BlogArticlePage() {
   if (!post) {
     return (
       <>
-        <SiteNav />
         <main className="pt-28 pb-20 px-4 sm:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-2xl font-display">{t.blog.notFound}</h1>
-            <Link to="/$locale/blog" params={{ locale }} className="mt-6 inline-block text-primary font-medium">
+            <Link
+              to="/$locale/blog"
+              params={{ locale }}
+              className="mt-6 inline-block text-primary font-medium"
+            >
               {t.blog.backToBlog}
             </Link>
           </div>
@@ -72,17 +76,23 @@ function BlogArticlePage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <SiteNav />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <main className="pt-28 pb-20 px-4 sm:px-8">
         <article className="mx-auto max-w-3xl">
-          <Link to="/$locale/blog" params={{ locale }} className="text-sm text-primary hover:underline">
+          <Link
+            to="/$locale/blog"
+            params={{ locale }}
+            className="text-sm text-primary hover:underline"
+          >
             ← {t.blog.backToBlog}
           </Link>
 
           {post.coverImage ? (
             <div className="mt-8 aspect-[16/10] overflow-hidden rounded-2xl">
-              <img src={post.coverImage} alt="" className="media-cover" />
+              <img src={post.coverImage} alt={post.title} className="media-cover" />
             </div>
           ) : null}
 

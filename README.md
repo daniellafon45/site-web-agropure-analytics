@@ -90,6 +90,7 @@ Le workflow `.github/workflows/deploy-cloudflare.yml` déploie automatiquement s
    - **Production (Cloudflare Pages)** — dashboard du projet connecté à GitHub :
      - **Settings → Variables and secrets → Production**
      - Ajouter le secret `WEB3FORMS_ACCESS_KEY` (type **Encrypted**)
+     - Ajouter aussi `VITE_WEB3FORMS_ACCESS_KEY` (même valeur) comme **fallback client** si la clé serveur n'est pas lue au runtime
      - **Redéployer** le site après toute modification (obligatoire)
      - Vérifier que le secret n'est pas uniquement sur **Preview**
    - **Production (Cloudflare Workers via Wrangler)** — après `npm run build` et le déploiement :

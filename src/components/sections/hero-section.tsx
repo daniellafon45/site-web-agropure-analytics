@@ -3,19 +3,32 @@ import { useLocale } from "@/i18n/context";
 import { HERO_VIDEO_MOBILE_SRC, HERO_VIDEO_SRC } from "@/lib/hero-media";
 import { siteButtonClass } from "@/lib/site-button";
 
+const HERO_POSTER_SRC = "/videos/hero-poster.webp";
+
 export function HeroSection() {
   const { t } = useLocale();
 
   return (
     <section className="bg-background p-3 sm:p-4 min-h-svh">
       <div className="relative isolate flex min-h-[calc(100svh-1.5rem)] flex-col overflow-hidden rounded-[20px] bg-[#1a2e1f] sm:rounded-[24px]">
+        <img
+          src={HERO_POSTER_SRC}
+          alt=""
+          width={1920}
+          height={1080}
+          fetchPriority="high"
+          decoding="async"
+          className="media-cover absolute inset-0"
+          aria-hidden
+        />
         <video
           className="media-cover absolute inset-0 motion-reduce:hidden"
           autoPlay
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
+          poster={HERO_POSTER_SRC}
         >
           <source src={HERO_VIDEO_MOBILE_SRC} type="video/mp4" media="(max-width: 767px)" />
           <source src={HERO_VIDEO_SRC} type="video/mp4" media="(min-width: 768px)" />

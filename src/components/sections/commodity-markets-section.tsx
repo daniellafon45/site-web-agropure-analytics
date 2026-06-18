@@ -3,7 +3,6 @@ import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
 import { Reveal } from "@/components/site/reveal";
 import { CommodityCard } from "@/components/ui/commodity-card";
 import { useLocale } from "@/i18n/context";
-import { getCommodityPrices } from "@/lib/api/commodities.server";
 import { COMMODITY_CODES, type CommodityMarketData, type CommodityQuote } from "@/lib/commodities";
 import { siteButtonClass } from "@/lib/site-button";
 import { cn } from "@/lib/utils";
@@ -111,7 +110,12 @@ function CommodityMarquee({
 
   return (
     <div className="flex flex-col items-center gap-2">
-      <button type="button" onClick={stepUp} aria-label={copy.scrollUp} className={arrowButtonClass}>
+      <button
+        type="button"
+        onClick={stepUp}
+        aria-label={copy.scrollUp}
+        className={arrowButtonClass}
+      >
         <ChevronUp className="size-5" aria-hidden />
       </button>
       <div
@@ -130,7 +134,12 @@ function CommodityMarquee({
           ))}
         </div>
       </div>
-      <button type="button" onClick={stepDown} aria-label={copy.scrollDown} className={arrowButtonClass}>
+      <button
+        type="button"
+        onClick={stepDown}
+        aria-label={copy.scrollDown}
+        className={arrowButtonClass}
+      >
         <ChevronDown className="size-5" aria-hidden />
       </button>
     </div>
@@ -182,26 +191,11 @@ function CommodityStaticList({
   );
 }
 
-export function CommodityMarketsSection() {
+export function CommodityMarketsSection({ initialData }: { initialData: CommodityMarketData }) {
   const { locale, t } = useLocale();
   const copy = t.home.commodityMarkets;
-  const [data, setData] = useState<CommodityMarketData | null>(null);
-  const [loading, setLoading] = useState(true);
+  const data = initialData;
   const [reducedMotion, setReducedMotion] = useState(false);
-
-  useEffect(() => {
-    let cancelled = false;
-    getCommodityPrices()
-      .then((result) => {
-        if (!cancelled) setData(result);
-      })
-      .finally(() => {
-        if (!cancelled) setLoading(false);
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -211,13 +205,16 @@ export function CommodityMarketsSection() {
     return () => media.removeEventListener("change", update);
   }, []);
 
-  const orderedQuotes = COMMODITY_CODES.map(
-    (code) => data?.quotes.find((q) => q.code === code),
+  const orderedQuotes = COMMODITY_CODES.map((code) =>
+    data?.quotes.find((q) => q.code === code),
   ).filter((q): q is NonNullable<typeof q> => q != null);
 
   const latestAsOf =
     orderedQuotes.length > 0
-      ? orderedQuotes.reduce((latest, q) => (q.asOf > latest ? q.asOf : latest), orderedQuotes[0].asOf)
+      ? orderedQuotes.reduce(
+          (latest, q) => (q.asOf > latest ? q.asOf : latest),
+          orderedQuotes[0].asOf,
+        )
       : null;
 
   return (
@@ -228,7 +225,9 @@ export function CommodityMarketsSection() {
             {copy.eyebrow}
           </span>
           <h2 className="mt-4 max-w-2xl font-display text-3xl md:text-4xl">{copy.title}</h2>
-          <p className="mt-4 max-w-2xl leading-relaxed text-secondary dark:text-white/65">{copy.subtitle}</p>
+          <p className="mt-4 max-w-2xl leading-relaxed text-secondary dark:text-white/65">
+            {copy.subtitle}
+          </p>
         </Reveal>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:items-center">
@@ -245,7 +244,9 @@ export function CommodityMarketsSection() {
               >
                 {copy.ctaButton}
               </a>
-              <p className="mt-6 text-sm text-muted-foreground dark:text-white/45">{copy.disclaimer}</p>
+              <p className="mt-6 text-sm text-muted-foreground dark:text-white/45">
+                {copy.disclaimer}
+              </p>
               <a
                 href={copy.fpmaHref}
                 target="_blank"
@@ -259,19 +260,18 @@ export function CommodityMarketsSection() {
           </div>
 
           <div className="order-2 flex flex-col lg:order-1">
-            {loading && (
-              <p className="py-8 text-center text-sm text-muted-foreground dark:text-white/50">{copy.loading}</p>
-            )}
-            {!loading && orderedQuotes.length > 0 && reducedMotion && (
+            {orderedQuotes.length > 0 && reducedMotion && (
               <CommodityStaticList quotes={orderedQuotes} copy={copy} />
             )}
-            {!loading && orderedQuotes.length > 0 && !reducedMotion && (
+            {orderedQuotes.length > 0 && !reducedMotion && (
               <CommodityMarquee quotes={orderedQuotes} copy={copy} />
             )}
-            {!loading && orderedQuotes.length === 0 && (
-              <p className="py-8 text-center text-sm text-muted-foreground dark:text-white/50">{copy.loading}</p>
+            {orderedQuotes.length === 0 && (
+              <p className="py-8 text-center text-sm text-muted-foreground dark:text-white/50">
+                {copy.loading}
+              </p>
             )}
-            {!loading && data && latestAsOf && (
+            {latestAsOf && (
               <p className="mt-4 text-center text-xs text-muted-foreground dark:text-white/45">
                 {copy.asOf} {formatAsOfDate(latestAsOf, locale)}
               </p>

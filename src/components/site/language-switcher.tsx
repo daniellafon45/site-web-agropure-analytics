@@ -23,16 +23,18 @@ export function LanguageSwitcher({ light = false }: { light?: boolean }) {
     <DropdownMenu>
       <DropdownMenuTrigger
         aria-label={t.nav.language}
-        className={`text-lg font-medium outline-none cursor-pointer transition-opacity hover:opacity-70 ${
+        className={`flex min-h-11 min-w-11 items-center justify-center px-1 text-base font-medium outline-none cursor-pointer transition-opacity hover:opacity-70 sm:min-w-0 sm:px-0 sm:text-lg ${
           light ? "text-white" : "text-foreground"
         }`}
       >
-        {LOCALE_LABELS[locale]}
+        <span className="sm:hidden">{locale.toUpperCase()}</span>
+        <span className="hidden sm:inline">{LOCALE_LABELS[locale]}</span>
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="end"
-        sideOffset={8}
-        className="min-w-[10rem] rounded-lg border-border bg-card text-card-foreground shadow-lg"
+        sideOffset={12}
+        collisionPadding={{ top: 72, bottom: 16 }}
+        className="z-[70] min-w-[10rem] rounded-lg border-border bg-card text-card-foreground shadow-lg"
       >
         <DropdownMenuRadioGroup
           value={locale}

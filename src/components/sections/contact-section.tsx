@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import contactBackground from "@/assets/contact-formulaire.png";
+import contactBackground from "@/assets/contact-formulaire.webp";
 import { useLocale } from "@/i18n/context";
 import { submitContactForm } from "@/lib/api/contact.functions";
+import { isServiceNotConfiguredError } from "@/lib/contact-form-utils";
+import { submitContactViaWeb3Forms } from "@/lib/contact-web3forms-fallback";
+import { formatPhoneForSubmit, getCountryByIso, getDefaultCountryIso } from "@/lib/phone-countries";
 import { Reveal } from "@/components/site/reveal";
+import { PhoneInput } from "@/components/ui/phone-input";
 import { siteButtonClass } from "@/lib/site-button";
 import { cn } from "@/lib/utils";
 
@@ -15,32 +19,57 @@ export function ContactSection() {
   const c = t.home.contact;
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const [phoneCountry, setPhoneCountry] = useState(() => getDefaultCountryIso(locale));
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
     setErrorMsg("");
     const fd = new FormData(e.currentTarget);
+    const country = getCountryByIso(phoneCountry);
+    const phone = formatPhoneForSubmit(country.dialCode, phoneNumber);
+
+    const payload = {
+      firstName: String(fd.get("firstName") ?? ""),
+      lastName: String(fd.get("lastName") ?? ""),
+      email: String(fd.get("email") ?? ""),
+      phone,
+      company: String(fd.get("company") ?? "") || undefined,
+      website: String(fd.get("website") ?? "") || undefined,
+      message: String(fd.get("message") ?? ""),
+      consent: fd.get("consent") === "on",
+      botField: String(fd.get("botField") ?? ""),
+    };
 
     try {
-      await submitContactForm({
-        data: {
-          firstName: String(fd.get("firstName") ?? ""),
-          lastName: String(fd.get("lastName") ?? ""),
-          email: String(fd.get("email") ?? ""),
-          phone: String(fd.get("phone") ?? "") || undefined,
-          company: String(fd.get("company") ?? "") || undefined,
-          website: String(fd.get("website") ?? "") || undefined,
-          message: String(fd.get("message") ?? ""),
-          consent: fd.get("consent") === "on",
-          botField: String(fd.get("botField") ?? ""),
-        },
-      });
+      await submitContactForm({ data: payload });
       setStatus("success");
-      e.currentTarget.reset();
     } catch (err) {
+      const message = err instanceof Error ? err.message : "Error";
+
+      if (isServiceNotConfiguredError(message)) {
+        try {
+          await submitContactViaWeb3Forms({
+            firstName: payload.firstName,
+            lastName: payload.lastName,
+            email: payload.email,
+            phone: payload.phone,
+            company: payload.company,
+            website: payload.website,
+            message: payload.message,
+          });
+          setStatus("success");
+          return;
+        } catch (fallbackErr) {
+          setStatus("error");
+          setErrorMsg(fallbackErr instanceof Error ? fallbackErr.message : message);
+          return;
+        }
+      }
+
       setStatus("error");
-      setErrorMsg(err instanceof Error ? err.message : "Error");
+      setErrorMsg(message);
     }
   }
 
@@ -88,8 +117,15 @@ export function ContactSection() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
-                <input type="text" name="botField" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden />
-                <div className="grid gap-4 sm:grid-cols-2">
+                <input
+                  type="text"
+                  name="botField"
+                  className="hidden"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden
+                />
+                <div className="grid gap-4 md:grid-cols-2">
                   <div>
                     <label className="text-xs font-medium text-foreground">{c.firstName}*</label>
                     <input name="firstName" required className={formFieldClass} />
@@ -99,17 +135,24 @@ export function ContactSection() {
                     <input name="lastName" required className={formFieldClass} />
                   </div>
                 </div>
-                <div className="grid gap-4 sm:grid-cols-2">
+                <div className="grid gap-4 md:grid-cols-2">
                   <div>
                     <label className="text-xs font-medium text-foreground">{c.email}*</label>
                     <input name="email" type="email" required className={formFieldClass} />
                   </div>
                   <div>
                     <label className="text-xs font-medium text-foreground">{c.phone}</label>
-                    <input name="phone" type="tel" className={formFieldClass} />
+                    <PhoneInput
+                      countryIso={phoneCountry}
+                      value={phoneNumber}
+                      onCountryChange={setPhoneCountry}
+                      onNumberChange={setPhoneNumber}
+                      placeholder={c.phonePlaceholder}
+                      countryLabel={c.phoneCountryLabel}
+                    />
                   </div>
                 </div>
-                <div className="grid gap-4 sm:grid-cols-2">
+                <div className="grid gap-4 md:grid-cols-2">
                   <div>
                     <label className="text-xs font-medium text-foreground">{c.company}</label>
                     <input name="company" className={formFieldClass} />
@@ -134,7 +177,12 @@ export function ContactSection() {
                   />
                 </div>
                 <label className="flex cursor-pointer items-start gap-2 text-xs text-muted-foreground">
-                  <input name="consent" type="checkbox" required className="mt-0.5 accent-primary" />
+                  <input
+                    name="consent"
+                    type="checkbox"
+                    required
+                    className="mt-0.5 accent-primary"
+                  />
                   <span>
                     {c.privacyConsentBefore}{" "}
                     <Link
@@ -147,7 +195,9 @@ export function ContactSection() {
                     {c.privacyConsentAfter}
                   </span>
                 </label>
-                {status === "error" && <p className="text-sm text-red-600 dark:text-red-400">{errorMsg}</p>}
+                {status === "error" && (
+                  <p className="text-sm text-red-600 dark:text-red-400">{errorMsg}</p>
+                )}
                 <button
                   type="submit"
                   disabled={status === "loading"}

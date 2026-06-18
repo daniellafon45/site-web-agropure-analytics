@@ -35,10 +35,12 @@ function urlEntry(localePath, priority, changefreq = "weekly") {
   const neutral = neutralPath(localePath);
   const loc = `${SITE_URL}${localePath.startsWith("/") ? localePath : `/${localePath}`}`;
   const xDefault = neutral ? `${SITE_URL}/en${neutral}` : `${SITE_URL}/en`;
+  const lastmod = new Date().toISOString().slice(0, 10);
   return `  <url>
     <loc>${loc}</loc>
 ${alternates(neutral)}
     <xhtml:link rel="alternate" hreflang="x-default" href="${xDefault}"/>
+    <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`;
@@ -53,13 +55,14 @@ const paths = [
 
 const body = paths
   .map((p) => {
-    const priority = p.endsWith("/blog") || p.match(/\/blog\//)
-      ? p.includes("/blog/")
-        ? "0.8"
-        : "0.9"
-      : p.includes("confidentialite")
-        ? "0.5"
-        : "1.0";
+    const priority =
+      p.endsWith("/blog") || p.match(/\/blog\//)
+        ? p.includes("/blog/")
+          ? "0.8"
+          : "0.9"
+        : p.includes("confidentialite")
+          ? "0.5"
+          : "1.0";
     return urlEntry(p, priority);
   })
   .join("\n");

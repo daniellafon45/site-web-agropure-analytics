@@ -1,32 +1,40 @@
-import nationalPlatformBg from "@/assets/features/national-platform.png";
-import surveyDigitizationBg from "@/assets/features/survey-digitization.png";
-import traceabilityBg from "@/assets/features/traceability.png";
-import waterReservoirsBg from "@/assets/features/water-reservoirs.png";
-import cropPracticesBg from "@/assets/features/crop-practices.png";
-import stoneCordonsBg from "@/assets/features/stone-cordons.png";
-import pestDiagnosticBg from "@/assets/features/pest-diagnostic.png";
-import agCalculatorBg from "@/assets/features/ag-calculator.png";
-import agAssistantBg from "@/assets/features/ag-assistant.png";
-import marketToolsBg from "@/assets/features/market-tools.png";
-import agLogisticsBg from "@/assets/features/ag-logistics.png";
-import harvestTokenizationBg from "@/assets/features/harvest-tokenization.png";
-import aerialFieldsFallback from "@/assets/aerial-fields.png";
-
-export const FEATURE_BACKGROUNDS: Record<string, string> = {
-  "national-platform": nationalPlatformBg,
-  "survey-digitization": surveyDigitizationBg,
-  traceability: traceabilityBg,
-  "water-reservoirs": waterReservoirsBg,
-  "crop-practices": cropPracticesBg,
-  "stone-cordons": stoneCordonsBg,
-  "pest-diagnostic": pestDiagnosticBg,
-  "ag-calculator": agCalculatorBg,
-  "ag-assistant": agAssistantBg,
-  "market-tools": marketToolsBg,
-  "ag-logistics": agLogisticsBg,
-  "harvest-tokenization": harvestTokenizationBg,
+const FEATURE_LOADERS: Record<string, () => Promise<{ default: string }>> = {
+  "national-platform": () => import("@/assets/features/national-platform.png"),
+  "survey-digitization": () => import("@/assets/features/survey-digitization.png"),
+  traceability: () => import("@/assets/features/traceability.png"),
+  "water-reservoirs": () => import("@/assets/features/water-reservoirs.png"),
+  "crop-practices": () => import("@/assets/features/crop-practices.png"),
+  "stone-cordons": () => import("@/assets/features/stone-cordons.png"),
+  "pest-diagnostic": () => import("@/assets/features/pest-diagnostic.png"),
+  "ag-calculator": () => import("@/assets/features/ag-calculator.png"),
+  "ag-assistant": () => import("@/assets/features/ag-assistant.png"),
+  "market-tools": () => import("@/assets/features/market-tools.png"),
+  "ag-logistics": () => import("@/assets/features/ag-logistics.png"),
+  "harvest-tokenization": () => import("@/assets/features/harvest-tokenization.png"),
 };
 
-export function getFeatureBackground(toolId: string): string {
-  return FEATURE_BACKGROUNDS[toolId] ?? aerialFieldsFallback;
+const backgroundCache = new Map<string, string>();
+let aerialFallback: string | null = null;
+
+async function getAerialFallback(): Promise<string> {
+  if (!aerialFallback) {
+    const mod = await import("@/assets/aerial-fields.png");
+    aerialFallback = mod.default;
+  }
+  return aerialFallback;
+}
+
+export async function loadFeatureBackground(toolId: string): Promise<string> {
+  const cached = backgroundCache.get(toolId);
+  if (cached) return cached;
+
+  const loader = FEATURE_LOADERS[toolId];
+  const src = loader ? (await loader()).default : await getAerialFallback();
+  backgroundCache.set(toolId, src);
+  return src;
+}
+
+/** Synchronous fallback for first paint — uses aerial fields until dynamic load completes. */
+export function getFeatureBackgroundPlaceholder(): string {
+  return aerialFallback ?? "";
 }
