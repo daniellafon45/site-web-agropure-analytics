@@ -21,14 +21,14 @@ export const PARTNER_LOGOS: PartnerLogo[] = [
   {
     id: "aqua-action",
     name: "Aqua Action",
-    url: "https://www.aqua-action.ca/",
+    url: "https://aquaaction.org/fr/",
     color: aquaAction,
     white: aquaActionWhite,
   },
   {
     id: "aqua-hacking",
     name: "AquaHacking",
-    url: "https://aquahacking.com/",
+    url: "https://aquaaction.org/fr/our-programs/aquahacking-challenge",
     color: aquaHacking,
     white: aquaHackingWhite,
   },
@@ -49,7 +49,7 @@ export const PARTNER_LOGOS: PartnerLogo[] = [
   {
     id: "ose-entreprendre",
     name: "OSE Entreprendre",
-    url: "https://www.oseentreprendre.ca/",
+    url: "https://www.osentreprendre.quebec/",
     color: oseEntreprendre,
     white: oseEntreprendreWhite,
   },
