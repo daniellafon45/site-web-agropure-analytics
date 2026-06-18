@@ -11,7 +11,6 @@ const logoPath = [
 ].find(existsSync);
 
 const BRAND = "#1b5e3b";
-const HERO_BG = "#1a2e1f";
 
 async function main() {
   if (!logoPath) {
@@ -19,7 +18,7 @@ async function main() {
     return;
   }
 
-  mkdirSync(join(publicDir, "videos"), { recursive: true });
+  mkdirSync(publicDir, { recursive: true });
 
   await sharp(logoPath)
     .resize(48, 48, { fit: "contain", background: BRAND })
@@ -40,12 +39,6 @@ async function main() {
     .png()
     .toFile(join(publicDir, "og-image.png"));
 
-  await sharp({
-    create: { width: 1920, height: 1080, channels: 3, background: HERO_BG },
-  })
-    .webp({ quality: 75 })
-    .toFile(join(publicDir, "videos/hero-poster.webp"));
-
   const contactPng = join(root, "src/assets/contact-formulaire.png");
   if (existsSync(contactPng)) {
     await sharp(contactPng)
@@ -56,7 +49,7 @@ async function main() {
   }
 
   console.log(
-    "Wrote public/favicon.png, apple-touch-icon.png, og-image.png, videos/hero-poster.webp",
+    "Wrote public/favicon.png, apple-touch-icon.png, og-image.png",
   );
 }
 
