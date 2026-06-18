@@ -20,7 +20,7 @@ export function CaseStudiesSection() {
     <section id="etudes-de-cas" className="section-dark px-4 sm:px-8 py-20 scroll-mt-28">
       <div className="mx-auto max-w-[1200px]">
         <Reveal>
-          <span className="text-xs font-semibold tracking-[0.2em] text-white/50 uppercase">
+          <span className="text-xs font-semibold tracking-[0.2em] text-muted-foreground dark:text-white/50 uppercase">
             {t.home.caseStudies.eyebrow}
           </span>
           <h2 className="mt-4 text-3xl md:text-4xl font-display">{t.home.caseStudies.title}</h2>
@@ -30,7 +30,7 @@ export function CaseStudiesSection() {
             const cover = CASE_COVER[item.slug] ?? aerialFields;
             return (
               <Reveal key={item.slug} delay={i * 80} className="flex h-full flex-col">
-                <article className="flex h-full min-h-0 flex-col isolate rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover-lift">
+                <article className="flex h-full min-h-0 flex-col isolate rounded-2xl overflow-hidden bg-card border border-border dark:bg-white/5 dark:border-white/10 hover-lift">
                   <div className="aspect-[16/10] shrink-0 overflow-hidden">
                     <img
                       src={cover}
@@ -46,7 +46,7 @@ export function CaseStudiesSection() {
                     <h3 className="mt-2 min-h-[2.75rem] text-lg font-display leading-snug line-clamp-2">
                       {item.title}
                     </h3>
-                    <p className="mt-2 min-h-[4.25rem] flex-1 text-sm text-white/65 leading-relaxed line-clamp-3">
+                    <p className="mt-2 min-h-[4.25rem] flex-1 text-sm text-secondary dark:text-white/65 leading-relaxed line-clamp-3">
                       {item.excerpt}
                     </p>
                     <div className="mt-auto pt-6">

@@ -18,10 +18,10 @@ export function ConsentBanner() {
     <div
       role="dialog"
       aria-label={t.consent.ariaLabel}
-      className="fixed inset-x-0 bottom-0 z-[100] border-t border-white/10 bg-surface-dark text-white shadow-[0_-8px_30px_rgba(0,0,0,0.25)]"
+      className="fixed inset-x-0 bottom-0 z-[100] border-t border-border bg-background text-foreground shadow-lg dark:border-white/10 dark:bg-surface-dark dark:text-white dark:shadow-[0_-8px_30px_rgba(0,0,0,0.25)]"
     >
       <div className="mx-auto flex max-w-[1200px] flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-8">
-        <p className="text-sm leading-relaxed text-white/85 sm:max-w-2xl">
+        <p className="text-sm leading-relaxed text-muted-foreground dark:text-white/85 sm:max-w-2xl">
           {t.consent.message}{" "}
           <Link to="/$locale/confidentialite" params={{ locale }} className="underline underline-offset-2">
             {t.consent.learnMore}
@@ -38,7 +38,7 @@ export function ConsentBanner() {
           <button
             type="button"
             onClick={() => { setConsent(true); setVisible(false); }}
-            className={siteButtonClass({ size: "sm", className: "text-surface-dark" })}
+            className={siteButtonClass({ size: "sm" })}
           >
             {t.consent.accept}
           </button>

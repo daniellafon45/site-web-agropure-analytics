@@ -26,6 +26,7 @@ export async function sendContactEmail(data: ContactMailPayload): Promise<void> 
     body: JSON.stringify({
       access_key: accessKey,
       subject: `Demande de contact — ${data.firstName} ${data.lastName}`,
+      name: `${data.firstName} ${data.lastName}`,
       from_name: `${data.firstName} ${data.lastName}`,
       email: data.email,
       firstName: data.firstName,

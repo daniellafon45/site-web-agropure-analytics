@@ -52,7 +52,7 @@ export function IndustriesSection() {
       <div className="mx-auto max-w-[1200px]">
         <Reveal>
           <div className="text-center max-w-4xl mx-auto mb-14">
-            <span className="text-xs font-semibold tracking-[0.2em] text-white/50 uppercase">
+            <span className="text-xs font-semibold tracking-[0.2em] text-muted-foreground dark:text-white/50 uppercase">
               {t.home.industries.eyebrow}
             </span>
             <h2 className="mt-4 text-3xl md:text-4xl font-display leading-tight">

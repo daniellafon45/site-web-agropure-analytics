@@ -11,18 +11,26 @@ import { ContactSection, FaqSection } from "@/components/sections/contact-sectio
 import { useLocale } from "@/i18n/context";
 import { getTranslations } from "@/i18n/translations";
 import { buildPageHead, faqJsonLd, localePath, organizationJsonLd } from "@/lib/seo/site-config";
+import { HERO_VIDEO_SRC } from "@/lib/hero-media";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "@/i18n/types";
 
 export const Route = createFileRoute("/$locale/")({
   head: ({ params }) => {
     const locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
     const t = getTranslations(locale);
-    return buildPageHead({
+    const page = buildPageHead({
       title: t.meta.homeTitle,
       description: t.meta.homeDescription,
       path: localePath(locale),
       locale,
     });
+    return {
+      ...page,
+      links: [
+        ...page.links,
+        { rel: "preload", href: HERO_VIDEO_SRC, as: "video", type: "video/mp4" },
+      ],
+    };
   },
   component: HomePage,
 });

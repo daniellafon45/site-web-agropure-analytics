@@ -40,10 +40,10 @@ function CommodityQuoteCard({
 }
 
 const arrowButtonClass = cn(
-  "flex size-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition-colors",
-  "hover:border-brand-light/40 hover:bg-white/10",
+  "flex size-9 items-center justify-center rounded-full border border-border bg-muted/50 text-foreground transition-colors",
+  "hover:border-brand-light/40 hover:bg-muted dark:border-white/15 dark:bg-white/5 dark:text-white dark:hover:bg-white/10",
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-light",
-  "disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-white/15 disabled:hover:bg-white/5",
+  "disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-border disabled:hover:bg-muted/50 dark:disabled:hover:border-white/15 dark:disabled:hover:bg-white/5",
 );
 
 function CommodityMarquee({
@@ -224,11 +224,11 @@ export function CommodityMarketsSection() {
     <section id="marches-mondiaux" className="section-dark scroll-mt-28 px-4 py-20 sm:px-8">
       <div className="mx-auto max-w-[1200px]">
         <Reveal>
-          <span className="text-xs font-semibold tracking-[0.2em] text-white/50 uppercase">
+          <span className="text-xs font-semibold tracking-[0.2em] text-muted-foreground dark:text-white/50 uppercase">
             {copy.eyebrow}
           </span>
           <h2 className="mt-4 max-w-2xl font-display text-3xl md:text-4xl">{copy.title}</h2>
-          <p className="mt-4 max-w-2xl leading-relaxed text-white/65">{copy.subtitle}</p>
+          <p className="mt-4 max-w-2xl leading-relaxed text-secondary dark:text-white/65">{copy.subtitle}</p>
         </Reveal>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:items-center">
@@ -245,7 +245,7 @@ export function CommodityMarketsSection() {
               >
                 {copy.ctaButton}
               </a>
-              <p className="mt-6 text-sm text-white/45">{copy.disclaimer}</p>
+              <p className="mt-6 text-sm text-muted-foreground dark:text-white/45">{copy.disclaimer}</p>
               <a
                 href={copy.fpmaHref}
                 target="_blank"
@@ -260,7 +260,7 @@ export function CommodityMarketsSection() {
 
           <div className="order-2 flex flex-col lg:order-1">
             {loading && (
-              <p className="py-8 text-center text-sm text-white/50">{copy.loading}</p>
+              <p className="py-8 text-center text-sm text-muted-foreground dark:text-white/50">{copy.loading}</p>
             )}
             {!loading && orderedQuotes.length > 0 && reducedMotion && (
               <CommodityStaticList quotes={orderedQuotes} copy={copy} />
@@ -269,10 +269,10 @@ export function CommodityMarketsSection() {
               <CommodityMarquee quotes={orderedQuotes} copy={copy} />
             )}
             {!loading && orderedQuotes.length === 0 && (
-              <p className="py-8 text-center text-sm text-white/50">{copy.loading}</p>
+              <p className="py-8 text-center text-sm text-muted-foreground dark:text-white/50">{copy.loading}</p>
             )}
             {!loading && data && latestAsOf && (
-              <p className="mt-4 text-center text-xs text-white/45">
+              <p className="mt-4 text-center text-xs text-muted-foreground dark:text-white/45">
                 {copy.asOf} {formatAsOfDate(latestAsOf, locale)}
               </p>
             )}

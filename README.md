@@ -87,11 +87,20 @@ Le workflow `.github/workflows/deploy-cloudflare.yml` déploie automatiquement s
 3. Copier l’**Access Key** générée.
 4. Définir la variable d’environnement :
    - **Local** : copier `.env.example` → `.env` et `.dev.vars.example` → `.dev.vars`, coller la clé, puis **redémarrer** `npm run dev`.
-   - **Production (Cloudflare Workers)** — après le premier déploiement :
+   - **Production (Cloudflare Pages)** — dashboard du projet connecté à GitHub :
+     - **Settings → Variables and secrets → Production**
+     - Ajouter le secret `WEB3FORMS_ACCESS_KEY` (type **Encrypted**)
+     - **Redéployer** le site après toute modification (obligatoire)
+     - Vérifier que le secret n'est pas uniquement sur **Preview**
+   - **Production (Cloudflare Workers via Wrangler)** — après `npm run build` et le déploiement :
 
 ```bash
-wrangler secret put WEB3FORMS_ACCESS_KEY
+npx wrangler secret put WEB3FORMS_ACCESS_KEY --config .output/server/wrangler.json
 ```
+
+Coller la même clé que dans `.env` / `.dev.vars` lorsque Wrangler le demande.
+
+5. Sur [web3forms.com](https://web3forms.com), ouvrir le formulaire lié à votre access key et confirmer que l'email de notification est **`noreply@agropure-analytics.com`** (le destinataire se configure dans le dashboard Web3Forms, pas dans le code).
 
 ### Checklist déploiement Cloudflare
 
@@ -102,15 +111,16 @@ wrangler secret put WEB3FORMS_ACCESS_KEY
 | 3 | Push sur `main` → déploiement auto via GitHub Actions |
 | 4 | Cloudflare Dashboard → Worker `site-web-agropure-analytics` → Routes : `agropure-analytics.com/*` et `www.agropure-analytics.com/*` |
 | 5 | SSL/TLS : mode **Full (strict)** |
-| 6 | `wrangler secret put WEB3FORMS_ACCESS_KEY` (après création du formulaire Web3Forms) |
-| 7 | Tester `/fr#contact` en production |
+| 6 | Pages : secret `WEB3FORMS_ACCESS_KEY` en **Production** + redeploy ; ou Workers : `npx wrangler secret put WEB3FORMS_ACCESS_KEY --config .output/server/wrangler.json` |
+| 7 | Web3Forms dashboard : notification vers `noreply@agropure-analytics.com` |
+| 8 | Tester `/fr#contact` en production |
 
 **Déploiement manuel** (sans GitHub Actions) :
 
 ```bash
 npm run build
 npx wrangler deploy --config .output/server/wrangler.json
-wrangler secret put WEB3FORMS_ACCESS_KEY
+npx wrangler secret put WEB3FORMS_ACCESS_KEY --config .output/server/wrangler.json
 ```
 
 ### Vidéo hero

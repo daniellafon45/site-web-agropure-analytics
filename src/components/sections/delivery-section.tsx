@@ -20,7 +20,7 @@ export function DeliverySection() {
           <h2 className="text-3xl md:text-4xl font-display leading-tight max-w-2xl">
             {t.home.delivery.title}
           </h2>
-          <p className="mt-4 text-white/65 max-w-2xl leading-relaxed">{t.home.delivery.subtitle}</p>
+          <p className="mt-4 text-secondary dark:text-white/65 max-w-2xl leading-relaxed">{t.home.delivery.subtitle}</p>
         </Reveal>
         <div className="mt-14 grid md:grid-cols-3 gap-8">
           {t.home.delivery.columns.map((col, i) => {
@@ -41,16 +41,16 @@ export function DeliverySection() {
                   }}
                   className={cn(
                     "w-full text-left pt-8 px-4 -mx-4 rounded-xl transition-all duration-200 cursor-pointer active:scale-[0.98]",
-                    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-light focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--surface-dark)]",
-                    isActive ? "bg-white/8 shadow-lg pb-6" : "hover:bg-white/5",
+                    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-light focus-visible:ring-offset-2 focus-visible:ring-offset-background dark:focus-visible:ring-offset-[var(--surface-dark)]",
+                    isActive ? "bg-accent dark:bg-white/8 shadow-lg pb-6" : "hover:bg-muted/50 dark:hover:bg-white/5",
                   )}
                 >
                   <Icon className="size-6 text-brand-light mb-4" />
                   <h3 className="text-xl font-display mb-2">{col.title}</h3>
-                  <p className="text-sm text-white/60 mb-4">{col.description}</p>
+                  <p className="text-sm text-secondary dark:text-white/60 mb-4">{col.description}</p>
                   <ul className="space-y-2">
                     {col.bullets.map((b) => (
-                      <li key={b} className="text-sm text-white/75 flex items-start gap-2">
+                      <li key={b} className="text-sm text-foreground/80 dark:text-white/75 flex items-start gap-2">
                         <span className="text-brand-light mt-1">•</span>
                         {b}
                       </li>
