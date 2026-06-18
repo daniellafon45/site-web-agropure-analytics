@@ -18,7 +18,7 @@ export const CONTACT_EMAIL = "contact@agropure-analytics.com";
 /** Adresse de notification Web3Forms pour les soumissions du formulaire contact. */
 export const FORM_NOTIFICATION_EMAIL = "noreply@agropure-analytics.com";
 
-export const LINKEDIN_URL = "https://www.linkedin.com/company/agropure-analytics/";
+export const LINKEDIN_URL = "https://www.linkedin.com/company/agropure-analytics-ca/";
 
 export const PUBLIC_PATHS = [
   "/fr",
