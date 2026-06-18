@@ -1,43 +1,21 @@
-import { useState } from "react";
 import { Reveal } from "@/components/site/reveal";
 import { useLocale } from "@/i18n/context";
-import { HERO_POSTER_JPG, HERO_POSTER_WEBP, HERO_VIDEO_SRC } from "@/lib/hero-media";
+import { HERO_VIDEO_SRC } from "@/lib/hero-media";
 import { siteButtonClass } from "@/lib/site-button";
-import { cn } from "@/lib/utils";
 
 export function HeroSection() {
   const { t } = useLocale();
-  const [videoPlaying, setVideoPlaying] = useState(false);
 
   return (
     <section className="bg-background p-3 sm:p-4 min-h-svh">
-      <div className="relative isolate flex min-h-[calc(100svh-1.5rem)] flex-col overflow-hidden rounded-[20px] bg-black sm:rounded-[24px]">
-        <picture
-          aria-hidden
-          className={cn(
-            "media-cover absolute inset-0 z-0 transition-opacity duration-700 ease-out",
-            videoPlaying && "pointer-events-none opacity-0",
-          )}
-        >
-          <source srcSet={HERO_POSTER_WEBP} type="image/webp" />
-          <img
-            src={HERO_POSTER_JPG}
-            alt=""
-            fetchPriority="high"
-            loading="eager"
-            decoding="async"
-            className="media-cover size-full"
-          />
-        </picture>
-
+      <div className="relative isolate flex min-h-[calc(100svh-1.5rem)] flex-col overflow-hidden rounded-[20px] bg-[#1a2e1f] sm:rounded-[24px]">
         <video
-          className="media-cover absolute inset-0 z-0 motion-reduce:hidden"
+          className="media-cover absolute inset-0 motion-reduce:hidden"
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
-          onPlaying={() => setVideoPlaying(true)}
         >
           <source src={HERO_VIDEO_SRC} type="video/mp4" />
         </video>
