@@ -1,6 +1,6 @@
 import { Reveal } from "@/components/site/reveal";
 import { useLocale } from "@/i18n/context";
-import { HERO_VIDEO_SRC } from "@/lib/hero-media";
+import { HERO_VIDEO_MOBILE_SRC, HERO_VIDEO_SRC } from "@/lib/hero-media";
 import { siteButtonClass } from "@/lib/site-button";
 
 export function HeroSection() {
@@ -17,7 +17,8 @@ export function HeroSection() {
           playsInline
           preload="auto"
         >
-          <source src={HERO_VIDEO_SRC} type="video/mp4" />
+          <source src={HERO_VIDEO_MOBILE_SRC} type="video/mp4" media="(max-width: 767px)" />
+          <source src={HERO_VIDEO_SRC} type="video/mp4" media="(min-width: 768px)" />
         </video>
 
         <div className="absolute inset-0 bg-black/45" />
