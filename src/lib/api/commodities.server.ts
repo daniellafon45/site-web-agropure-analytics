@@ -20,10 +20,10 @@ const COMMODITY_META: Record<
   GRAIN_CORN: { nameKey: "corn", category: "grain", unit: "$/bu" },
   GRAIN_SOY: { nameKey: "soy", category: "grain", unit: "$/bu" },
   GRAIN_SORGHUM: { nameKey: "sorghum", category: "grain", unit: "$/bu" },
-  FERT_UREA: { nameKey: "urea", category: "fertilizer", unit: "$/t" },
-  FERT_DAP: { nameKey: "dap", category: "fertilizer", unit: "$/t" },
-  FERT_POTASH: { nameKey: "potash", category: "fertilizer", unit: "$/t" },
-  FERT_NH3: { nameKey: "ammonia", category: "fertilizer", unit: "$/t" },
+  FERT_UREA: { nameKey: "urea", category: "fertilizer", unit: "USD $/t" },
+  FERT_DAP: { nameKey: "dap", category: "fertilizer", unit: "USD $/t" },
+  FERT_POTASH: { nameKey: "potash", category: "fertilizer", unit: "USD $/t" },
+  FERT_NH3: { nameKey: "ammonia", category: "fertilizer", unit: "USD $/t" },
   FUEL_DIESEL: { nameKey: "diesel", category: "fuel", unit: "$/gal" },
   NAT_GAS: { nameKey: "natGas", category: "fuel", unit: "$/MMBtu" },
 };
@@ -64,7 +64,7 @@ function normalizeUnit(unit: string | undefined, fallback: string): string {
   if (!unit) return fallback;
   const u = unit.toLowerCase();
   if (u.includes("bushel")) return "$/bu";
-  if (u.includes("ton")) return "$/t";
+  if (u.includes("ton")) return "USD $/t";
   if (u.includes("gallon") || u.includes("gal")) return "$/gal";
   if (u.includes("mmbtu")) return "$/MMBtu";
   return fallback;

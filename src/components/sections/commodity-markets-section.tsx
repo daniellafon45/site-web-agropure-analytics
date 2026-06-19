@@ -26,15 +26,17 @@ function CommodityQuoteCard({
   copy: ReturnType<typeof useLocale>["t"]["home"]["commodityMarkets"];
 }) {
   return (
-    <CommodityCard
-      ticker={copy.tickers[quote.name] ?? quote.name.toUpperCase()}
-      name={copy.products[quote.name] ?? quote.name}
-      price={quote.price}
-      unit={quote.unit}
-      change={quote.changePct}
-      category={quote.category}
-      productKey={quote.name}
-    />
+    <div className="px-2">
+      <CommodityCard
+        ticker={copy.tickers[quote.name] ?? quote.name.toUpperCase()}
+        name={copy.products[quote.name] ?? quote.name}
+        price={quote.price}
+        unit={quote.unit}
+        change={quote.changePct}
+        category={quote.category}
+        productKey={quote.name}
+      />
+    </div>
   );
 }
 

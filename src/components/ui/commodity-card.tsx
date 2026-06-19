@@ -29,14 +29,15 @@ const CommodityCard = React.forwardRef<HTMLDivElement, CommodityCardProps>(
     return (
       <motion.div
         ref={ref}
-        whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+        whileHover={{ scale: 1.02, zIndex: 10, transition: { duration: 0.2 } }}
         className={cn(
-          "flex min-h-[4.5rem] w-full items-center justify-between gap-4 p-4",
+          "relative flex min-h-[4.5rem] w-full items-center justify-between gap-4 p-4",
           "rounded-xl border border-border bg-card text-foreground shadow-sm",
           "dark:border-white/10 dark:bg-white/5 dark:text-white",
           "transition-shadow hover:border-brand-light/30 hover:shadow-md",
           className,
         )}
+        style={{ transformOrigin: "center center" }}
         {...props}
       >
         <div className="flex min-w-0 items-center gap-4">
@@ -56,7 +57,7 @@ const CommodityCard = React.forwardRef<HTMLDivElement, CommodityCardProps>(
 
         <div className="shrink-0 text-right">
           <p className="font-semibold text-lg tabular-nums">{formattedPrice}</p>
-          <p className="text-[10px] uppercase tracking-wide text-muted-foreground dark:text-white/45">{unit}</p>
+          <p className="text-[10px] tracking-wide text-muted-foreground normal-case dark:text-white/45">{unit}</p>
           <div className="mt-0.5 flex items-center justify-end gap-1">
             {hasChange &&
               (isPositive ? (

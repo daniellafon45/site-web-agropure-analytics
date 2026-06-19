@@ -8,7 +8,7 @@ export const seedPostsEn: SeedPostInput[] = [
     title: "National crop monitoring platform: 25,000+ plots tracked daily",
     excerpt:
       "How a national agriculture engine combines satellite imagery and field surveys to monitor crops at scale across Africa and North America.",
-    category: "Gouvernement",
+    category: "Government",
     author: "AgroPure Analytics",
     publishedAt: "2026-03-15",
     content: buildArticleHtml({
@@ -70,7 +70,7 @@ export const seedPostsEn: SeedPostInput[] = [
     title: "Real-time photo pest diagnostics for field agents",
     excerpt:
       "Field teams identify crop diseases and pests via smartphone; centralized alerts enable coordinated response within hours, not weeks.",
-    category: "Agriculteurs",
+    category: "Farmers",
     author: "AgroPure Analytics",
     publishedAt: "2026-03-22",
     content: buildArticleHtml({
@@ -131,7 +131,7 @@ export const seedPostsEn: SeedPostInput[] = [
     title: "Agricultural credit scoring for insurers and lenders",
     excerpt:
       "Spatialized performance and risk indicators refine agricultural credit assessment with verifiable plot-level data instead of self-reported yields.",
-    category: "Assurances",
+    category: "Insurance",
     author: "AgroPure Analytics",
     publishedAt: "2026-04-01",
     content: buildArticleHtml({
@@ -192,7 +192,7 @@ export const seedPostsEn: SeedPostInput[] = [
     title: "Cooperative traceability from farm gate to export",
     excerpt:
       "African cooperatives digitize harvest flows, quality checks and buyer certificates to secure premiums and meet export traceability requirements.",
-    category: "Coopératives",
+    category: "Cooperatives",
     author: "AgroPure Analytics",
     publishedAt: "2026-04-08",
     content: buildArticleHtml({
@@ -250,7 +250,7 @@ export const seedPostsEn: SeedPostInput[] = [
     title: "Digitizing national farm surveys with mobile data collection",
     excerpt:
       "Replace paper agricultural censuses with GPS-tagged mobile forms, validation rules and live dashboards for national statistics offices.",
-    category: "Gouvernement",
+    category: "Government",
     author: "AgroPure Analytics",
     publishedAt: "2026-04-15",
     content: buildArticleHtml({
@@ -308,7 +308,7 @@ export const seedPostsEn: SeedPostInput[] = [
     title: "AI field boundary detection for agricultural parcels",
     excerpt:
       "Deep learning models delineate field boundaries from satellite imagery so governments register parcels faster and insurers validate insured areas.",
-    category: "Données & satellite",
+    category: "Data & satellite",
     author: "AgroPure Analytics",
     publishedAt: "2026-04-22",
     content: buildArticleHtml({
@@ -366,7 +366,7 @@ export const seedPostsEn: SeedPostInput[] = [
     title: "Smallholder credit scoring with field data in Africa",
     excerpt:
       "NGOs and microfinance institutions use plot-level productivity signals to extend credit to smallholders previously excluded from formal finance.",
-    category: "Coopératives",
+    category: "Cooperatives",
     author: "AgroPure Analytics",
     publishedAt: "2026-05-01",
     content: buildArticleHtml({
@@ -424,7 +424,7 @@ export const seedPostsEn: SeedPostInput[] = [
     title: "Satellite drought monitoring for crop stress alerts",
     excerpt:
       "Vegetation and soil moisture indicators trigger drought alerts so farmers and advisors act before irreversible yield loss.",
-    category: "Agriculteurs",
+    category: "Farmers",
     author: "AgroPure Analytics",
     publishedAt: "2026-05-08",
     content: buildArticleHtml({
@@ -482,7 +482,7 @@ export const seedPostsEn: SeedPostInput[] = [
     title: "Agtech API and white-label integration for farm software",
     excerpt:
       "OEMs and distributors embed AgroPure analytics via REST APIs or deploy a branded national platform without building GIS infrastructure from scratch.",
-    category: "Marchés",
+    category: "Markets",
     author: "AgroPure Analytics",
     publishedAt: "2026-05-15",
     content: buildArticleHtml({
@@ -540,7 +540,7 @@ export const seedPostsEn: SeedPostInput[] = [
     title: "Parametric crop insurance powered by satellite data",
     excerpt:
       "Index-based policies trigger payouts when vegetation or rainfall thresholds are breached, reducing loss adjustment costs and speeding farmer compensation.",
-    category: "Assurances",
+    category: "Insurance",
     author: "AgroPure Analytics",
     publishedAt: "2026-05-22",
     content: buildArticleHtml({

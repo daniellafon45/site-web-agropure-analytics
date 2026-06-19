@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/site/reveal";
 import { useLocale } from "@/i18n/context";
+import { isSectorHashId } from "@/lib/home-links";
 import { cn } from "@/lib/utils";
 import { siteButtonClass } from "@/lib/site-button";
 import imgGouvernement from "@/assets/sectors/gouvernement.png";
@@ -48,6 +49,22 @@ export function IndustriesSection() {
   const { t } = useLocale();
   const items = t.home.industries.items;
   const [activeId, setActiveId] = useState<string | null>(null);
+
+  const focusSectorFromHash = useCallback(() => {
+    const id = window.location.hash.replace(/^#/, "");
+    if (!isSectorHashId(id)) return;
+
+    setActiveId(id);
+    window.setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 520);
+  }, []);
+
+  useEffect(() => {
+    focusSectorFromHash();
+    window.addEventListener("hashchange", focusSectorFromHash);
+    return () => window.removeEventListener("hashchange", focusSectorFromHash);
+  }, [focusSectorFromHash]);
 
   return (
     <section id="secteurs" className="section-dark px-4 sm:px-8 py-20 scroll-mt-28">

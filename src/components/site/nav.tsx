@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useIsDesktopNav } from "@/hooks/use-media-query";
 import { useLocale } from "@/i18n/context";
 import type { Locale } from "@/i18n/types";
+import { homeHashHref } from "@/lib/home-links";
 import { Logo } from "./logo";
 import { LanguageSwitcher } from "./language-switcher";
 import { ThemeToggle } from "./theme-toggle";
@@ -77,7 +78,7 @@ export function SiteNav() {
           }`}
         >
           <a
-            href="#contact"
+            href={homeHashHref(locale, "#contact")}
             className={`hidden sm:inline transition-opacity hover:opacity-70 ${
               lightHeader ? "text-white" : "text-primary"
             }`}
@@ -119,14 +120,19 @@ export function SiteNav() {
                       {l.label}
                     </Link>
                   ) : (
-                    <a key={l.href} href={l.href} onClick={closeMenu} className={linkClassName}>
+                    <a
+                      key={l.href}
+                      href={homeHashHref(locale, l.href)}
+                      onClick={closeMenu}
+                      className={linkClassName}
+                    >
                       {l.label}
                     </a>
                   ),
                 )}
               </nav>
               <a
-                href="#contact"
+                href={homeHashHref(locale, "#contact")}
                 onClick={closeMenu}
                 className={siteButtonClass({ variant: "brand", size: "sm", className: "mt-6" })}
               >

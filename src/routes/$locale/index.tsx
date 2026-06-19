@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteFooter } from "@/components/site/footer";
 import { HeroSection } from "@/components/sections/hero-section";
@@ -9,6 +9,7 @@ import { CaseStudiesSection } from "@/components/sections/case-studies-section";
 import { useLocale } from "@/i18n/context";
 import { getTranslations } from "@/i18n/translations";
 import { getCommodityPrices } from "@/lib/api/commodities.server";
+import { isSectorHashId } from "@/lib/home-links";
 import { buildPageHead, faqJsonLd, localePath } from "@/lib/seo/site-config";
 import { DEFAULT_LOCALE, isLocale } from "@/i18n/types";
 
@@ -52,6 +53,28 @@ function HomePage() {
   const { t } = useLocale();
   const { commodityPrices } = Route.useLoaderData();
   const faqLd = JSON.stringify(faqJsonLd(t.home.faq.items));
+
+  useEffect(() => {
+    const scrollToHash = () => {
+      const id = window.location.hash.replace(/^#/, "");
+      if (!id || isSectorHashId(id)) return;
+
+      const attempt = (tries = 0) => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+          return;
+        }
+        if (tries < 24) window.setTimeout(() => attempt(tries + 1), 100);
+      };
+
+      attempt();
+    };
+
+    scrollToHash();
+    window.addEventListener("hashchange", scrollToHash);
+    return () => window.removeEventListener("hashchange", scrollToHash);
+  }, []);
 
   return (
     <>

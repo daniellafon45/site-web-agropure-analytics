@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Linkedin } from "lucide-react";
 import { useLocale } from "@/i18n/context";
+import { homeHashHref } from "@/lib/home-links";
 import { LINKEDIN_URL } from "@/lib/seo/site-config";
 import { ThemeAwareLogo } from "@/components/site/theme-aware-logo";
 import logo from "@/assets/logo-agropure.png";
@@ -18,7 +19,10 @@ export function SiteFooter() {
             <ul className="space-y-2 text-sm text-muted-foreground dark:text-white/75">
               {t.footer.sectors.map((sector) => (
                 <li key={sector.href}>
-                  <a href={sector.href} className="hover:text-foreground dark:hover:text-white transition-colors">
+                  <a
+                    href={homeHashHref(locale, sector.href)}
+                    className="hover:text-foreground dark:hover:text-white transition-colors"
+                  >
                     {sector.label}
                   </a>
                 </li>
