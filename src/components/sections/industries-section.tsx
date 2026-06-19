@@ -26,7 +26,7 @@ function isDesktopPointer() {
 export function IntroSection() {
   const { t } = useLocale();
   return (
-    <section className="px-4 sm:px-8 py-16 md:py-20">
+    <section id="mission" className="px-4 sm:px-8 py-16 md:py-20 scroll-mt-28">
       <div className="mx-auto max-w-[1200px]">
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="lg:w-2/5">

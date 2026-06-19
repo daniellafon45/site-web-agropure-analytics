@@ -82,6 +82,7 @@ function HomePage() {
       <main>
         <HeroSection />
         <IndustriesSection />
+        <IntroSection />
         <IntegrationsSection />
         <Suspense fallback={<SectionFallback />}>
           <FeaturesSection />
@@ -95,7 +96,6 @@ function HomePage() {
         <Suspense fallback={<SectionFallback />}>
           <FaqSection />
         </Suspense>
-        <IntroSection />
         <Suspense fallback={<SectionFallback />}>
           <ContactSection />
         </Suspense>
