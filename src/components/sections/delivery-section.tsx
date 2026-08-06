@@ -40,9 +40,9 @@ export function DeliverySection() {
                     }
                   }}
                   className={cn(
-                    "w-full text-left pt-8 px-4 -mx-4 rounded-xl transition-all duration-200 cursor-pointer active:scale-[0.98]",
+                    "w-full text-left px-4 py-8 -mx-4 rounded-xl transition-all duration-200 cursor-pointer active:scale-[0.98]",
                     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-light focus-visible:ring-offset-2 focus-visible:ring-offset-background dark:focus-visible:ring-offset-[var(--surface-dark)]",
-                    isActive ? "bg-accent dark:bg-white/8 shadow-lg pb-6" : "hover:bg-muted/50 dark:hover:bg-white/5",
+                    isActive ? "bg-accent dark:bg-white/8 shadow-lg" : "hover:bg-muted/50 dark:hover:bg-white/5",
                   )}
                 >
                   <Icon className="size-6 text-brand-light mb-4" />
