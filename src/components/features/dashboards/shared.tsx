@@ -47,16 +47,16 @@ type DashboardMetricGridProps = {
 
 export function DashboardMetricGrid({ stats, className }: DashboardMetricGridProps) {
   return (
-    <div className={cn("grid grid-cols-3 gap-3", className)}>
+    <div className={cn("grid grid-cols-3 items-stretch gap-3", className)}>
       {stats.map((stat, i) => {
         const percent = parseStatPercent(stat.value);
         return (
-          <div key={stat.label} className="space-y-1">
-            <div className="text-[9px] uppercase tracking-wider text-black/50 line-clamp-2 leading-tight">
+          <div key={stat.label} className="flex h-full min-w-0 flex-col gap-1">
+            <div className="min-h-[2.25rem] text-[9px] uppercase tracking-wider text-black/50 line-clamp-2 leading-tight">
               {stat.label}
             </div>
-            <div className="text-lg font-light text-black">{stat.value}</div>
-            <div className="h-1 w-full overflow-hidden rounded-full bg-black/5">
+            <div className="mt-auto text-lg font-light leading-none text-black">{stat.value}</div>
+            <div className="h-1 w-full shrink-0 overflow-hidden rounded-full bg-black/5">
               <motion.div
                 className="h-full rounded-full bg-black/40"
                 initial={{ width: 0 }}

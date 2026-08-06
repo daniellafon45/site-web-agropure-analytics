@@ -21,10 +21,12 @@ export function MetricStatRow({ label, value, className, delay = 0 }: MetricStat
   const percent = parseStatPercent(value);
 
   return (
-    <div className={cn("space-y-2", className)}>
-      <p className="text-[9px] uppercase tracking-widest text-neutral-500 line-clamp-2 leading-tight">{label}</p>
-      <p className="text-xl font-light text-neutral-800">{value}</p>
-      <div className="h-1 w-full rounded-full bg-neutral-200 overflow-hidden">
+    <div className={cn("flex h-full min-w-0 flex-col gap-2", className)}>
+      <p className="min-h-[2.25rem] text-[9px] uppercase tracking-widest text-neutral-500 line-clamp-2 leading-tight">
+        {label}
+      </p>
+      <p className="mt-auto text-xl font-light leading-none text-neutral-800">{value}</p>
+      <div className="h-1 w-full shrink-0 overflow-hidden rounded-full bg-neutral-200">
         <motion.div
           className="h-full rounded-full bg-neutral-800"
           initial={{ width: 0 }}
